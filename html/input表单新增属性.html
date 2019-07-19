@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>input表单新增属性</title>
+</head>
+<body>
+    <h3>input表单新增属性</h3>
+    用户名：<input type="text" placeholder="请输入用户名" autofocus/><br /><br />
+    上传文件：<input type="file" multiple /><br /><br />
+    <form>
+        邮箱：<input type="email" autocomplete name="email"  required accesskey="s"/><br /><br /><!--要使autocomplete生效 1.必须有提交；必须有name-->
+        <input type="submit" />
+    </form>
+</body>
+</html>

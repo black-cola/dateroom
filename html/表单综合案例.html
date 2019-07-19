@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>表单综合案例</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>学生档案</legend>
+                <label>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" placeholder="请输入你的名字"/></label><br /><br />
+                <label>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：<input type="tel" /></label><br /><br />
+                <label>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：<input type="email" placeholder="xx@xx.com"/></label><br /><br />
+                <label>所属学院：<input type="text" placeholder="请选择学院" list="xueyuan"/></label>
+                <datalist id="xueyuan">
+                    <option>java学院</option>
+                    <option>前端学院</option>
+                    <option>PHP学院</option>
+                    <option>设计学院</option>
+                </datalist><br /><br />
+                出生日期：<input type="date" /><br /><br />
+                <label>成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绩：<input type="number" /></label><br /><br />
+                毕业时间：<input type="date" /><br /><br />
+                <input type="submit" value="提交"/>
+                <input type="reset" value="重置"/>
+            </fieldset>
+        </form>
+    </body>
+</html>
