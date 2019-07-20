@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凹凸文字</title>   
+    <style>
+        body{
+        background-color:gray;
+        }
+        div:first-child{
+            font-size:66px;
+            color:gray;
+            font-weight:700;
+            text-align:center;
+            text-shadow: 1px 1px 1px black,
+            -1px -1px 1px white;
+        }
+        div:last-child{
+            font-size: 66px;
+            color: gray;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: -1px -1px 1px black,
+                        1px 1px 1px white;
+        }
+        div::selection{
+            color:pink;
+        }
+    </style>
+</head>
+<body>
+    <div>我是凸起的字</div>
+    <div>我是凹下的字</div>
+</body>
+</html>
