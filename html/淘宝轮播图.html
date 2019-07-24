@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>淘宝轮播图</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            a {
+                text-decoration: none;
+            }
+            ul {
+                list-style: none;
+            }
+            .slider {
+                width: 520px;
+                height: 280px;
+                /* border: 1px solid #ccc; */
+                margin: 50px auto;
+                position: relative;
+                /* box-sizing: border-box; */
+            }
+            .arrow-l,
+            .arrow-r {
+                /* position: absolute; */
+               display: block;
+               position: absolute;
+               top: 50%;
+               margin-top: -18px;
+            }
+            .arrow-l {
+                left:0px;
+                           }
+            .arrow-r {
+                right: 0px;
+            }
+            .circle {
+                width: 65px;
+                height: 13px;
+                /* border: 1px solid rgba(0, 0, 0, 0.4); */
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                position: absolute;
+                left: 50%;
+                margin-left: -33px;
+                bottom: 15px;
+            }
+            .circle li {
+                width: 9px;
+                height: 9px;
+                background-color: #ccc;
+                line-height: 5px;
+                /* border: 1px solid #fff; */
+                border-radius: 50%;
+                /* display: inline-block; */
+                float: left;
+                margin: 2px;
+            }
+            .circle .current {
+                background-color: #ff4400;
+            }
+            .word {
+                width:160px;
+                height: 25px;
+                border:1px solid red;
+                word-break: keep-all;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slider">
+            <img src="images/taobao.jpg"  alt="">
+            <a href="#" class="arrow-l">
+                    <img src="images/left.png" alt="">
+            </a>
+            <a href="" class="arrow-r">
+                <img src="images/right.png" alt="">
+            </a>
+           
+                <ul class="circle">
+                    <li class="current"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+           
+        </div>
+        <div class="word">hello world hello world hello</div>
+    </body>
+</html>

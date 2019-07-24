@@ -3,220 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>学成网</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px; 
-        }
-        body {
-            background-color: #f3f5f7;  /*整个页面的背景色*/
-        }
-        ul {
-            list-style: none;
-        }
-        .clearfix:before,.clearfix:after {
-            content: "";
-            display: table;
-        }
-        .clearfix:after {
-            clear: both;
-        }
-        .clearfix {
-            *zoom: 1;
-        }
-        a {
-            font-size: 16px;
-            text-decoration: none;
-            color: #050505;
-        }
-        input{
-            border: 0px;
-            box-sizing: border-box;
-        }
-        .container {
-            width: 1200px;
-            margin: 0 auto;
-        }
-        a:hover {
-            background: url()
-        }
-        header {
-            /* width: 1366px; */
-            height: 100px;
-            /* background-color: pink; */
-            overflow: hidden;
-        }
-        nav {
-            width: 1366px;
-            height: 42px;
-            /* background-color: purple; */
-            margin: 26px auto;
-        }
-        .logo {
-            float: left;
-            margin-right:  50px;
-        }
-        .navbar {
-            float: left;
-            height: 42px;
-            line-height: 42px;
-        }
-        .navbar ul li {
-            float: left;
-        }
-        .navbar li a {
-            padding: 0 10px; /*上下为0 左右8px */
-            display: block;
-            height: 42px;
-            
-        }
-        .navbar li a:hover{
-            border-bottom: 2px solid #00a4ff;
-        }
-        
-        .search {
-            width: 410px;
-            height: 38px;
-            border: 1px solid #00a4ff;
-            float: right;
-        }
-        .search input[type=text] {
-            /* background-color: pink; */
-            width: 360px;
-            height: 38px;
-            padding-left: 20px;
-            float: left;
-        }
-        .search input[type=submit] {
-            background-color: #00a4ff;
-            width: 50px;
-            height: 38px;
-            float: left;
-            background: #00a4ff url(images/search_06.png) no-repeat center center;
-        }
-        .personal {
-            width: px;
-            height: 42px;
-            line-height: 42px;
-            /* background-color: #00a4ff; */
-            float: right;
-            margin: 0 15px 0 35px;
-        }
-        .personal img {
-            margin: 0 8px;
-           
-        } /* 个人中心结束*/
-        .banner {
-            height: 420px;
-            background-color: #1c036c;
-        }
-        .banner-in {
-            background-color: #fff;
-            background: url(images/banner_03.png) 0 0 no-repeat;
-            height:420px;
-        }
-        .slidebar {
-            width: 190px;
-            height: 420px;
-            background: rgba(0, 0, 0, 0.3);     /*盒子背景半透明*/
-            float: left;
-        }
-        .slidebar li a {
-            color: white;
-            font-size: 14px;
-            padding: 0 20px;
-            display: block;
-            height: 45px;
-            line-height: 45px;
-        }
-        .slidebar li a span {
-            float: right;
-            font-family: Arial;
-        }
-        .slidebar a:hover {
-            color: #00a4ff;
-        }
-        .timetable {
-            float: right;
-            width: 230px;
-            height: 300px;
-            margin-top: 50px;
-            background-color: #fff;
-        }
-        .timetable dt{
-            height: 50px;
-            background-color: #9bceea;
-            text-align: center;
-            line-height: 50px;
-            color: white;
-            font-weight: 700;
-            letter-spacing: 2px; /* 设置字间距*/
-            margin-bottom: 5px;
-        }
-        .timetable dd {
-            width: 193px;
-            height: 60px;
-            /* background-color: purple; */
-            margin: 0 auto;
-            /* line-height: 30px; */
-            border-bottom: 1px solid #ccc;
-            padding-top: 12px;
-            box-sizing: border-box;
-        }
-        .timetable dd:last-child {
-            border: 0px;
-          
-        }
-        .timetable dd a {
-            height: 38px;
-            border: 2px solid #00a4ff;
-            display: block;
-            color: #00a4ff;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-align: center;
-            line-height: 38px;
-        }
-    
-        .timetable dd a:hover{
-            background-color: #00a4ff;
-            color: white;
-        }
-        .timetable dd h4 {
-            font-size: 16px;
-            font-weight: normal;
-            color: #4e4e4e;
-        }
-        .timetable dd p {
-            font-size: 14px;
-            color: #a5a5a5;
-        }
-        .recommend {
-            height: 60px;
-            line-height: 60px;
-            margin-top: 8px;
-            box-shadow: 0 2px 2px #00000033;
-            background-color: #fff;
-        }
-        .recommend a {
-            width: ;
-            height: ;
-            padding: 0 30px;
-            border-right: 1px solid rgba(0, 0, 0, 0.3);
-            /* color: #4e4e4e; */
-        }
-        .recommend a:hover {
-            color: #00a4ff;
-        }
-        .recommend a:first-child {
-            color: #00a4ff;
-        }
-        .recommend a:last-child {
-            border: 0px;
-            color: #00a4ff;
-            float: right;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
     <header>
@@ -284,7 +71,15 @@
                     <dd>
                         <a href="#">全部课程</a>
                     </dd>       <!--课程表结束-->
-            </dl>    
+            </dl>
+            <ul class=circle>
+                <li class="current"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>    
         </div>  
     </div>
     <div class="recommend container">
@@ -297,5 +92,103 @@
         <a href="#">javaWeb</a>
         <a href="#">修改兴趣</a>
     </div>
+    <div class="reco-products container">
+        <div class="reco-hd">
+            <h4>精品推荐</h4>
+            <a href="#">全部课程</a>
+        </div>
+        <div class="reco-bd clearfix">
+            <ul>
+                <li>
+                    
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                        <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                        <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>
+                <li>
+                    <img src="images/icon1.png" alt="">
+                    <h4>Think PHP 5.0 博客系统实战项目演练</h4>
+                    <p> <span>高级</span> · 1125人在学习</p>
+                </li>                               
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-in container">
+                <div class="footer-l">
+                        <img src="images/logo-s.png" alt="">
+                        <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。<br />
+                                © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                        <a href="#">下载APP</a>
+                    </div>
+                <div class="footer-r">
+                        <dl>
+                            <dt>关于学成网</dt>
+                            <dd><a href="#">关于</a></dd>
+                            <dd><a href="#">管理团队</a></dd>
+                            <dd><a href="#">工作机会</a></dd>
+                            <dd><a href="#">客户服务</a></dd>
+                            <dd><a href="#">帮助</a></dd>
+                        </dl>
+                        <dl>
+                                <dt>关于学成网</dt>
+                                <dd><a href="#">关于</a></dd>
+                                <dd><a href="#">管理团队</a></dd>
+                                <dd><a href="#">工作机会</a></dd>
+                                <dd><a href="#">客户服务</a></dd>
+                                <dd><a href="#">帮助</a></dd>
+                        </dl>
+                        <dl>
+                                <dt>关于学成网</dt>
+                                <dd><a href="#">关于</a></dd>
+                                <dd><a href="#">管理团队</a></dd>
+                                <dd><a href="#">工作机会</a></dd>
+                                <dd><a href="#">客户服务</a></dd>
+                                <dd><a href="#">帮助</a></dd>
+                        </dl>      
+                </div> 
+                 
+        </div>
+    </footer>
 </body>
 </html>

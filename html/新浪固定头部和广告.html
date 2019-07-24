@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新浪固定头部</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .top {
+            background: url(images/top.png) no-repeat top center;
+            width: 100%;
+            height: 44px;
+            position: fixed;
+            left: 0px;
+            top: 0px;
+        }
+        .box {
+            width: 1002px;
+            margin: 0 auto;
+            margin-top: 44px;
+        }
+        .ad-l,
+        .ad-r {
+            position:fixed;
+            top: 100px;
+        }
+        .ad-l {
+            left: 0;
+        }
+        .ad-r {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+    </div>
+    <div class="ad-l"><img src="images/ad-l.png" alt=""></div>
+    <div class="ad-r"><img src="images/ad-r.png" alt=""></div>
+    <div class="box">
+        <img src="images/box.png" />
+    </div>
+</body>
+</html>
