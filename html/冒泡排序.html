@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function sort(array) {
+            for (var i = 0; i < array.length - 1; i++) {
+                for (var j = 0; j < array.length - 1 - i; j++ ) {
+                    if (array[j] > array[j + 1]) {
+                        var tmp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = tmp;
+                    }
+                }
+            }
+            return array;
+        }
+        var arr = [17, 5 ,98, 23];
+        sort(arr);
+        console.log(sort(arr));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

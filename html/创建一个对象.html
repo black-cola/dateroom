@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个对象</title>
+    <script>
+        var hero = {
+            name: 'zhenji',
+            equipment: 'shoes',
+            weapon: 'futou',
+            blood: 100,
+            attack: function() {
+                console.log('你被' + this.name + '攻击');
+            },
+            run: function() {
+                console.log('血量不足，快跑');
+            }
+        }
+        console.log(hero.name);
+        console.log(hero.blood);
+        hero.attack();
+        hero.run();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
