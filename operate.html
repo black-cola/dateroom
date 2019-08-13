@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运算符练习</title>
+</head>
+<body>
+    <script>
+        //声明一个变量，并赋值1234，并将数字中的每一位取出打印
+        var num = 1234;
+        //通过%10的操作，将最后一位4取出来，并赋值给ge
+        var ge = num % 10;
+        console.log('个位数为' + ge);
+        //通过num/10的操作，再将结果取整，去掉num的最后一位4，保存在num中
+         num = parseInt(num / 10);
+        console.log(num);
+        //通过%10的操作，将3取出来，并赋值给shi
+        var shi = num % 10;
+        console.log('十位数为' + shi);
+        //通过num/10的操作，再将结果取整，去掉num的最后一位3，保存在num中
+         num = parseInt(num / 10);
+        var bai = num % 10;
+        console.log('百位数为' + bai);
+        num = parseInt(num / 10);
+        console.log(num);
+        var qian = num % 10;
+        console.log('千位数为' + qian);
+        var a = 5;
+        var b = 3;
+        a = a ^ b;
+        b = b ^ a;
+        a = a ^ b;
+        console.log(a,b);
+        
+    </script> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <h2>画廊</h2>
+    <div id = "imagegalary">
+        <a href="images/1 (2).jpg" title = "图片1"><img src="images/1-small.jpg" alt=""></a>
+        <a href="images/2 (2).jpg" title = "图片2"><img src="images/2-small.jpg" alt=""></a>
+        <a href="images/3 (2).jpg" title = "图片3"><img src="images/3-small.jpg" alt=""></a>
+        <a href="images/4 (2).jpg" title = "图片4"><img src="images/4-small.jpg" alt=""></a>
+    </div>
+    <img id = "image" src="images/placeholder.png" width="450" alt="">
+    <p id = "des">选择一个图片</p>
+    <script>
+        var imagegalary = document.getElementById('imagegalary');
+        var links = imagegalary.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            link.onclick = function() {
+            // alert('hah');
+            var image = document.getElementById('image'); 
+            var des = document.getElementById('des');
+            image.src = this.href;
+            des.innerText = this.title;
+            return false;
+            }
+        }
+    </script>
+</body>
+</html>

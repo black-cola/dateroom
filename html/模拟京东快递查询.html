@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 30px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .box::after {
+            width: 5px;
+            height: 5px;
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            position: absolute;
+            background-color: pink;
+        } 
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box"></div>
+        <input type="text" class="jd">
+    </div>
+</body>
+</html>

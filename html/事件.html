@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <input type="button" id = "btn" value = '点我'>
+   <br /><br />
+   <img id = 'mv' src="images/a.jpg" alt="" width="400">
+   <script>
+       var btn = document.getElementById('btn');
+       var mv = document.getElementById('mv');
+       var flag = 1; //当flag为1的时候，对应a.jpg;当flag为2的时候，对应b.jpg
+       btn.onclick = function() {
+           if (flag === 1) {
+               mv.src = "images/a.jpg";
+               flag = 2;
+           } else {
+                mv.src = "images/b.jpg";
+                flag = 1;
+           }
+       }
+      
+   </script>
+</body>
+</html>

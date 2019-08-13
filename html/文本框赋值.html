@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本框赋值</title>
+    <style>
+        input {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input id="btn" type="button" value="获取文本框的值">
+
+    <script>
+        var inputs = document.getElementsByTagName('input');
+        for (i = 0; i < inputs.length; i++) {
+            var input = inputs[i];
+            if (input.type === 'text') {
+                input.value = i;
+            }
+        }
+        // 获取文本框的值  第一种方法
+        // var btn = document.getElementById('btn');
+        // var s = '';
+        // btn.onclick = function () {
+        //     for (i = 0; i < inputs.length; i++) {
+        //     var input = inputs[i];
+        //     if (input.type === 'text') {
+        //          s += input.value + '|';
+                 
+        //     }
+            
+        // }
+        // s = s.substr(0,s.length - 1);
+        //  console.log(s);
+        // }
+
+
+        // 获取文本框的值 第二种方法  ----推荐使用
+        var btn = document.getElementById('btn');
+        var array = [];
+        btn.onclick = function () {
+            for (i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                if (input.type === 'text') {
+                    array.push(input.value);
+                }
+            }
+            console.log(array.join('|'));
+        }
+        
+
+    </script>
+</body> 
+</html>

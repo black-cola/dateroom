@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检测用户名和密码</title>
+    <style>
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="txtUserName"><br />
+    <input type="password" id="txtUserPassword"><br />
+    <input type="button" id="btnLogin" value="登录">
+    <script>
+        var btnLogin = document.getElementById('btnLogin');
+        btnLogin.onclick = function () {
+            var txtUserName = document.getElementById('txtUserName');
+            if (txtUserName.value.length >= 3 & txtUserName.value.length <= 6) {
+                txtUserName.className = '';
+            } else {
+                txtUserName.className = 'bg';
+                return; //不满足条件则不能登录
+            }
+            if (txtUserPassword.value.length >= 6 & txtUserPassword.value.length <= 8) {
+                txtUserPassword.className = '';
+            } else {
+                txtUserPassword.className = 'bg';
+                return;
+            }
+            console.log('登录');
+        }
+    </script>
+</body>
+</html>

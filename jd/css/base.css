@@ -15,6 +15,12 @@ blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,
     margin: 0;
     padding: 0;
 }
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
 input,button {
     border:0;
     outline: none; /* 取消表单边框*/
@@ -47,12 +53,6 @@ header {
     background-color: #020000;
 }
 /* 头部结束 */
-.fl {
-    float: left;
-}
-.fr {
-    float: right;
-}
 /* 快速导航栏开始 */
 .shortcut {
     background-color: #e3e4e5;

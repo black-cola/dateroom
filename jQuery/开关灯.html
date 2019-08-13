@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!-- <script>
+    //DOM对象实现
+    window.onload = function() {
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            if(this.value == '关灯') {
+                document.body.style.backgroundColor = 'black';
+                this.value = '开灯';
+
+            } else {
+                document.body.style.backgroundColor = 'white';
+                this.value = '关灯';
+            }
+        }
+    };
+    </script> -->
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        //jQuery对象实现
+    //页面加载事件
+    $(function() {
+        $('#btn').click(function() {
+            if($(this).val === '关灯') {
+                $(body).css('backgroundColor','black');
+                $(this).val('开灯');
+            } else {
+                $(body).css('backgroundColor','white');
+                $(this).val('关灯');
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <input type="button" value="关灯" id="btn" /> 
+</body>
+</html>
