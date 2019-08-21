@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoList—最简单的待办事项列表</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <form>
+            <label for="">ToDoList</label>
+            <input id="title" type="text" placeholder="添加ToDo">
+           
+        </form>
+        <!-- <button onclick="removeSth()">删除事件</button>
+        <button onclick="addSth()">添加事件2</button> -->
+    </header>
+    <main>
+            <h2>正在进行
+                    <span id="todocount">0</span>
+            </h2>
+            <ol id="todolist"></ol>
+            <h2>已经完成
+                    <span id="donecount">0</span>
+            </h2>
+            <ol id="donelist"></ol>
+    </main>
+    <footer>
+        Copyright © 2014 todolist.cn
+        <a href="javascript:;" id="clear" >clear</a> 
+    </footer>
+    <script src="todolist.js"></script>
+</body>
+</html>

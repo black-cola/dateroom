@@ -1,0 +1,91 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #CDCDCD;
+}
+header {
+    height: 50px;
+    background-color: #323232;
+    position: relative;
+}
+label {
+    color: #ddd;
+    font-size: 24px;
+    line-height: 50px;
+    padding-left: 350px;
+}
+header input  {
+    width: 360px;
+    height: 26px;
+    border: none;
+    top: 12px;
+    position: absolute;
+    left: 550px;
+    border-radius: 7px;
+    outline: none;
+}
+/* button {
+    position: absolute;
+    top: 12px;
+    left: 910px;
+} */
+main {
+    margin: 0 auto;
+    width: 600px;
+}
+h2 {
+    position: relative;
+}
+span {
+    position: absolute;
+    background-color: #E6E6FA;
+    font-size: 12px;
+    color: #666;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    top: 2px;
+    right:5px;
+}
+
+footer {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #999;
+    
+}
+ol {
+    margin: 0;
+    padding: 0;
+}
+li {
+    width: 600px;
+    height:32px;
+    line-height:32px;
+    background-color: #fff;
+    border-radius: 5px;
+    list-style: none;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+li a {
+    float: right;
+    right: 80px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    background-color: #ccc;
+    line-height: 13px;
+    border-radius: 50%;
+    color: red;
+    margin: 7px 7px;
+    font-size: 30px;
+    text-align: center;
+}
