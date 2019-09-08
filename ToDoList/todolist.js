@@ -1,20 +1,19 @@
 function addSth(e) {
     //声明一个对象来记录列表
     var obj_list = {
-        todo: '', //存储文本框的value值
+        todo: '', //用来存储文本框的value值
         done: false  //初始化用户输入的数据属性，以便对用户待办事项进行分类
     }
-    var title = document.getElementById('title');
-    var todolist = document.getElementById('todolist'); 
+    var title = document.getElementById('title');  //获取文本框
     if(title.value.length == 0) {
         alert("todo不能为空");
         return;
     } 
-    obj_list.todo = title;
+    obj_list.todo = title.value;
     todolist.push(obj_list);
 
     saveData(todolist);
-    title = "";     //初始化输入框
+    title.value = "";     //初始化输入框
     load();     //将用户输入的数据添加至dom节点
     title.focus();
 }
@@ -24,21 +23,20 @@ function load() {
     var donelist = document.getElementById("donelist");
     var todocount = document.getElementById('todocount');
     var donecount = document.getElementById('donecount');
-    todostring = "",
-    donestring = "",
-    todocount = 0;
-    donecount = 0;
+    var todostring = "",
+    var donestring = "",
+    var todocount = 0;
+    var donecount = 0;
 
     document.getElementById("title").focus();
-    todolist = loadData();
+    todolist = loadData();  //加载数据
 
     if (todolist !== null) {
         for (var i=0; i<todolist.length; i++) {
             if (!todolist[i].done) {
                 todostring +='<li>' + "<input type='checkbox' οnchange='update("+i+", \"done\", true)'>"
                 + "<p id='p-"+i+"' οnclick='edit("+i+")'>" + todolist[i].todolist + "</p>" +
-                "<a οnclick='remove("+i+")'>-</a>" +
-                "</li>";
+                "<a οnclick='remove("+i+")'>-</a>" + "</li>";
 
                 todocount++;
             }else {
@@ -57,13 +55,13 @@ function load() {
         todocount.innerHTML = todocount;
         donecount.innerHTML = donecount;
     }else {
-    todolist.innerHTML = "";
-    donelist.innerHTML = "";
-    todocount.innerHTML = 0;
-    donecount.innerHTML = 0;
+        todolist.innerHTML = "";
+        donelist.innerHTML = "";
+        todocount.innerHTML = 0;
+        donecount.innerHTML = 0;
     }
 }
-
+//修改事项
 function edit(i) {
     var p = document.getElementById('p-' + i),
         pContent = p.innerHTML,
@@ -99,7 +97,7 @@ function update(i, field, value) {
     saveData(todolist);
     load();
 }
-
+//删除事项
 function remove(i) {
     todolist.splice(i, 1);
  
@@ -107,12 +105,14 @@ function remove(i) {
  
     load();
 }
-
+//将事项缓存到本地
 function saveData(data) {
+    //LocalStorage.setItem(key,value)：将value存储到key字段
     localStorage.setItem("mytodolist", JSON.stringify(data));   //JS对象转换成JSON对象存进本地缓存
 }
+//加载数据
 function loadData() {
-    var hisTory = localStorage.getItem("mytodolist");
+    var hisTory = localStorage.getItem("mytodolist"); //获取指定key（mytodolist）本地存储的值
     if(hisTory != null){
         return JSON.parse(hisTory);     //JSON对象转换为JS对象
     }
@@ -120,7 +120,7 @@ function loadData() {
         return []; 
     }
 }
-
+//清除所有事项
 function clear() {
     localStorage.clear();
     load();

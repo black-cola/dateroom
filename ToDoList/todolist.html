@@ -12,26 +12,30 @@
     <header>
         <form>
             <label for="">ToDoList</label>
-            <input id="title" type="text" placeholder="添加ToDo">
+            <input id="input" type="text" placeholder="添加ToDo">
            
         </form>
         <!-- <button onclick="removeSth()">删除事件</button>
         <button onclick="addSth()">添加事件2</button> -->
     </header>
-    <main>
+    <main id="main">
             <h2>正在进行
                     <span id="todocount">0</span>
             </h2>
             <ol id="todolist"></ol>
-            <h2>已经完成
+            <h2 id="todoh">已经完成
                     <span id="donecount">0</span>
             </h2>
             <ol id="donelist"></ol>
     </main>
     <footer>
         Copyright © 2014 todolist.cn
-        <a href="javascript:;" id="clear" >clear</a> 
+        <a href="javascript:;" id="clear">clear</a> 
+        <!-- <a href="javascript:;" id="clear" onclick = "onclick()">删除</a>  -->
+        <!-- <a href="javascript:;" id="clear" onclick = "edit()">编辑</a>  -->
     </footer>
-    <script src="todolist.js"></script>
+    <!-- <script src="todolist.js"></script> -->
+    <!-- <script src="finish.js"></script> -->
+    <script src="myjs.js"></script>
 </body>
 </html>

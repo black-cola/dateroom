@@ -24,6 +24,7 @@ header input  {
     left: 550px;
     border-radius: 7px;
     outline: none;
+    padding-left: 10px;
 }
 /* button {
     position: absolute;
@@ -74,6 +75,7 @@ li {
     list-style: none;
     margin-bottom: 5px;
     padding-left: 10px;
+    position: relative;
 }
 li a {
     float: right;
@@ -88,4 +90,26 @@ li a {
     margin: 7px 7px;
     font-size: 30px;
     text-align: center;
+}
+.reduce {
+    position: absolute;
+    /* background-color: #E6E6FA; */
+    font-size: 36px;
+    color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    top: 6px;
+    right:10px;
+    cursor: pointer;
+}
+.checkbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    vertical-align:middle;
+    margin-right: 7px;
+
 }
