@@ -12,8 +12,10 @@ var input, todolist, donelist, li, todocount, donecount, clear, value;
         $('#input').val('');
         return;
     } else {
-        $('#todolist').append('<li><input type = "checkbox" class="checkbox">' + value + '<span class="reduce">-</span></li>'); 
-        todocount = $('#todolist > li').length;
+       // $('#todolist').append('<li><input type = "checkbox" class="checkbox">' + value + '</p><span class="reduce">-</span></li>'); 
+        $('#todolist').append('<li><input type = "checkbox" class="checkbox"><input type="text" id="modify" style="border:0;width:399px;" value="' + value + '" ></p><span class="reduce">-</span></li>'); 
+        // $('#todolist').append('<li><input type = "checkbox" class="checkbox"><p id="modify" style="display:inline">' + value + '</p><span class="reduce">-</span></li>'); 
+       todocount = $('#todolist > li').length;
         
         $('#todocount').text(todocount);
         $('#donecount').text(donecount);
@@ -32,9 +34,7 @@ var input, todolist, donelist, li, todocount, donecount, clear, value;
                 donecount--;
                 $('#donecount').text(donecount);
            }
-           $(e.target).parent().remove();
-           
-           
+           $(e.target).parent().remove(); 
            
        }
        if($(e.target).parent().parent().attr('id') === 'todolist' && $(e.target).is(':checked') === true){
@@ -43,12 +43,22 @@ var input, todolist, donelist, li, todocount, donecount, clear, value;
            $('#todocount').text(todocount);
            donecount++;
            $('#donecount').text(donecount);
-       } else if($(e.target).parent().parent().attr('id') === 'donelist' && $(e.target).is(':checked') === false){
-           $('#todolist').append($(e.target).parent());
-           todocount++;
-           $('#todocount').text(todocount);
-           donecount--;
-           $('#donecount').text(donecount);
+
+       } else if($(e.target).parent().parent().attr('id') === 'donelist'){
+           if($(e.target).prop('nodeName').toLowerCase() === 'input'){
+               if($(e.target).attr('type') === 'checkbox'){
+                if($(e.target).is(':checked') === false){
+                    $('#todolist').append($(e.target).parent());
+                   // console.log($(e.target).prop('tagName'));
+                    todocount++;
+                    $('#todocount').text(todocount);
+                    donecount--;
+                    $('#donecount').text(donecount);
+
+                   }
+               }
+           }
+           
        }
    });
    $('#input').keypress(function(e){

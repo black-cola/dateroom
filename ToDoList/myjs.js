@@ -1,12 +1,3 @@
-    // function removeList(){
-    //     var currentLi = e.target.parentNode;
-    //     e.target.parentNode.parentNode.removeChild(currentLi);
-        
-    // }
-
-    // var reduceSpan = document.querySelectorAll('span.reduce');
-
-    
 (function(){
     var lis, input, todolist, donelist, todocount, donecount, value, li, checkbox, text, span, txt, main, todolen, donelen, main, clear;
     main = document.getElementById('main');
@@ -90,19 +81,6 @@
         donecount.innerHTML = 0;
         console.log('clear');
     }
-    // document.getElementById("input").onkeypress = function (e) {
-    //     if(e.keyCode === 13) {
-    //         console.log(3);
-    //         addList();
-    //     }
-    // }
-        
-    // document.addEventListener('keypress',function(e){
-    //     if(e.keyCode === 13) {
-    //         console.log(3);
-    //         addList();
-    //     }
-    // });
 
     // input.addEventListener('keypress',function(e){
     //     var e = e || window.e || arguments.callee.caller.arguments[0];
@@ -115,7 +93,7 @@
     // });
     input.addEventListener('keypress',function(e){
         var e = e || window.e || arguments.callee.caller.arguments[0];
-        if(e || e.keyCode === '13') {
+        if(e || e.keyCode === 13) {
             
             addList();
             //取消回车键keypress事件的默认行为
@@ -124,7 +102,7 @@
     });
     
     
-    })();
+})();
 
     // function edit() {
     //     li.innerHTML = checkbox + '<input type = "text" value = text> ' + span;
