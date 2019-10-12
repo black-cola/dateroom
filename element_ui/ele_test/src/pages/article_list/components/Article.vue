@@ -1,8 +1,10 @@
 <template>
     <div >
-        <ul class="clearfix">
+        <ul class="clearfix one">
             <li v-for='o in newDate' :key='o.title'>
-                <el-link href="">{{ o.title }}</el-link>
+                <router-link target="_blank" to="../../Article_detail">{{ o.title }}</router-link>
+                <div class="des">{{o.description}}</div>
+                <div class="des">{{o.author}}<span class="author">{{o.date}}</span></div>
             </li>
         </ul>
     </div>
@@ -21,8 +23,24 @@ export default {
         margin:0;
         padding:0;
     }
-    li {
+    .one {
         list-style: none;
+        /* background-color: #e0e0e0; */
+        /* background-color: #fff;
+        border-bottom: 1px solid #c2c2c2; */
+        width: 70%;
+        margin-left: -10px;
+        margin-bottom: 10px;
+        margin-top: -7px;
+    }
+    li {
+        border-radius: 5px;
+        background-color: #fff;
+        border-bottom: 1px solid #d1d1d1;
+        padding-left: 15px;
+    }
+    li:hover {
+        background-color: #f5f4f4;
     }
     .el-link {
         font-size: 20px;
@@ -39,5 +57,23 @@ export default {
     }
     .center {
         text-align: center;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    a:hover {
+        color: rgb(99, 163, 247);
+    }
+    .des{
+        font-size: 14px;
+        color: #8a8a8a;
+        margin-top: -12px; 
+    }
+    .author {
+        float: right;
+        padding-right: 20px;
     }
 </style>

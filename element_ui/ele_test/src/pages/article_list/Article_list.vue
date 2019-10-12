@@ -1,6 +1,7 @@
 <template>
     <div>
       <el-container>
+        <!-- <home-header></home-header> -->
         <el-header>Header
           
         </el-header>
@@ -19,7 +20,7 @@
         
         <el-container>
           <el-aside width="150px">Aside</el-aside>
-          <el-main>Main
+          <el-main>
             <article-title :newDate="newData"></article-title>
             <el-pagination 
               @size-change="handleSizeChange"
@@ -42,6 +43,7 @@
 
 <script>
 import ArticleTitle from './components/Article'
+import HomeHeader from '../home/components/Header'
 import Search from './components/Search'
 // import Pagination from './components/Pagination'
 export default {
@@ -105,7 +107,8 @@ export default {
     },
     components: {
         ArticleTitle,
-        Search
+        Search,
+        HomeHeader
         // Pagination 
     },
     methods:{
@@ -126,8 +129,8 @@ export default {
 			      this.searchData = this.tableData.filter(function(item) {
               return Object.keys(item).some(function(key) {
                  // console.log(key)
-                 if(key == 'title'){
-return String(item[key]).toLowerCase().indexOf(search) > -1
+                  if(key == 'title'){
+                    return String(item[key]).toLowerCase().indexOf(search) > -1
                  }
 			  	       
 			         })
@@ -145,7 +148,7 @@ return String(item[key]).toLowerCase().indexOf(search) > -1
   text-align: center;
 }
 .el-header {
-    background-color: #B3C0D1;
+    background-color: rgb(99, 163, 247);;
     color: #333;
     text-align: center;
     line-height: 60px;
